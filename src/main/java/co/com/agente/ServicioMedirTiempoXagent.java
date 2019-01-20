@@ -29,7 +29,7 @@ public class ServicioMedirTiempoXagent {
 	private static String getPid() {
 		
 		try {
-			return ManagementFactory.getRuntimeMXBean().getName().split("@")[0];
+			return "Pid" + ManagementFactory.getRuntimeMXBean().getName().split("@")[0];
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

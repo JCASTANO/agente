@@ -10,8 +10,10 @@ import com.codahale.metrics.graphite.GraphiteReporter;
 
 public class GlobalRegistry {
 	
-	private static final int PORT_GRAPHITE = 31003;
-	private static final String HOST_GRAPHITE = "10.0.1.93";
+//	private static final int PORT_GRAPHITE = 31003;
+//	private static final String HOST_GRAPHITE = "10.0.1.93";
+	private static final int PORT_GRAPHITE = 2003;
+	private static final String HOST_GRAPHITE = "graphite-service.prometheus";
 	
 	static MetricRegistry metricRegistry;
 

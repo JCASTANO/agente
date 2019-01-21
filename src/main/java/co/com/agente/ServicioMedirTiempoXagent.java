@@ -5,16 +5,23 @@ import java.net.InetAddress;
 
 public class ServicioMedirTiempoXagent {
 	
-	private static final String POINT = ".";
+	private static final String REGEX_PUNTO = "\\.";
+	private static final String SLASH = "/";
+	private static final String GUION = "-";
+	private static final String PUNTO = ".";
 	private static final String PID_NAME_DEFAULT = "PidNameDefault";
 	private static final String NODO_NAME_DEFAULT = "NodoNameDefault";
 
 	private ServicioMedirTiempoXagent() {}
 
 	public static SimpleMetric init(String fullClassName,String methodName) {
-		SimpleMetric simpleMetric = new SimpleMetric(getHostName() + POINT + fullClassName + POINT + methodName);
+		SimpleMetric simpleMetric = new SimpleMetric(getHostName() + PUNTO + reemplazar(fullClassName) + GUION + methodName);
 		simpleMetric.init();
 		return simpleMetric;
+	}
+	
+	private static String reemplazar(String texto) {
+		return texto.replaceAll(REGEX_PUNTO, GUION).replaceAll(SLASH, GUION);
 	}
 
 	private static String getHostName() {

@@ -12,3 +12,4 @@ co.com.enlaceoperativo.maat.test.ValidadorDesdeArchivo;validarDesdeArchivos
 co.com.enlaceoperativo.maat.test.ValidadorDesdeBD;validarRegistroBD
 co.com.suaporte.ValidadorRegistrosDos;validar,procesarRegistros2,validarRegistros2BD
 co.com.enlaceoperativo.conversor.rabbit.ProcessMessage;apply,obtenerRutaArchivoConvertidoRuta,obtenerRutaArchivoConvertido
+co.com.enlaceoperativo.suaporte.dao.OracleDAOFactory;cerrarConexionForzada
